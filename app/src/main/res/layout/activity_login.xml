@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in to continue"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
+        app:layout_constraintStart_toStartOf="@id/tv_welcome"
+        app:layout_constraintEnd_toEndOf="@id/tv_welcome"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_sign_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/user"
+        android:layout_marginTop="@dimen/_40sdp"/>
+
+    <EditText
+        android:id="@+id/et_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/user_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableStart="@drawable/user_two"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:hint="@string/user_name">
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_user_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp"
+        android:drawableStart="@drawable/padlock"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:hint="@string/password">
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_user_password"
+        app:layout_constraintStart_toStartOf="@id/et_user_password"
+        android:text="@string/remember_me"
+        android:textColor="@color/white"
+        android:padding="@dimen/_10sdp"
+        android:backgroundTint="@color/gray"
+        android:checked="true"
+        android:textSize="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/check_box"
+        app:layout_constraintBottom_toBottomOf="@id/check_box"
+        android:text="@string/forgot_password"
+        app:layout_constraintEnd_toEndOf="@id/et_user_password"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/check_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/login"
+        android:paddingHorizontal="@dimen/_40sdp"
+        android:textColor="@color/white"
+        android:background="@color/gray"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_15sdp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

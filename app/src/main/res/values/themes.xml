@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.YILAssignment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/purple_500</item>
+       <!-- <item name="android:statusBarColor">@android:color/transparent</item>-->
+    </style>
+
+    <style name="Theme.YILAssignment" parent="Base.Theme.YILAssignment" />
+</resources>
